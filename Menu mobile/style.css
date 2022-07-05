@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.btn-primary{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    row-gap: 12px;
+    height: 100vh;
+}
+
+
+header {
+    padding: 24px 10%;
+    left: 0;
+    width: 80%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.toggle>i {
+    font-size: 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+ul {
+    display: flex;
+    column-gap: 48px;
+    list-style: none;
+    align-items: center;
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle {
+        display: block;
+    }
+
+    .toggle,
+    .logo>i {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* .menu{
+        display: none;
+    } */
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: all 1s ease;
+        
+    }
+
+    ul {
+        height: 50Vh;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1.5rem;
+       
+    }
+
+    li > a {
+        color: white !important;
+    }
+
+    .open{
+        display: block !important;
+    }
+
+    .close{
+        display: none !important;
+    }
+
+    .nav-open .open{
+        display: none !important;
+    }
+
+    .nav-open .close{
+        display: block !important;
+    }
+
+    .nav-open .menu{
+        transform: translateX(0);
+    }
+}
